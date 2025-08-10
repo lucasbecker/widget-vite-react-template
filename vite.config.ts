@@ -20,6 +20,11 @@ export default defineConfig({
       },
     },
   },
+  resolve: {
+    alias: {
+      "@": resolve(__dirname, "src"),
+    },
+  },
   experimental: {
     renderBuiltUrl(filename: string) {
       return "http://localhost:4173/" + filename;
